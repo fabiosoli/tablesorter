@@ -77,20 +77,11 @@ BORDERS
 	color: #B8860B;
 }
 
-/*
-table.table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \25B4\25BE" 
-}
-*/
-
-
 .table thead {
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	box-shadow: 3px 3px 3px #999999;
 	cursor: pointer;
-
 	background: #93cede; /* Old browsers */
 	background: -moz-linear-gradient(top,  #93cede 0%, #75bdd1 41%, #49a5bf 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#93cede), color-stop(41%,#75bdd1), color-stop(100%,#49a5bf)); /* Chrome,Safari4+ */
@@ -104,14 +95,24 @@ table.table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sortta
 .table thead > tr > th, tbody > tr  {
 	text-align: center;
 	height: 60px;
+	box-shadow: 3px 3px 3px #999999;	
 	min-width: 120px; /* important when resizing */
 	vertical-align: middle;
 	border-bottom: none;
 }
 
 .table > tbody > tr > td {
-     vertical-align: middle;
+	border-bottom: 1px solid #439bad;
+    vertical-align: middle;
 }
+
+
+.table > tbody > tr:nth-child(7) { /* targeting last-row to remove bottom border */
+    border-bottom: hidden;
+}
+
+
+
 
 .table tbody tr td.country {
 	text-align: left;
@@ -162,16 +163,6 @@ table.table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sortta
 }
 
 
-/* ********** 
-TEST 
-********** */
-
-
-/* ********** 
-TEST 
-********** */
-
-
 @media (max-width: 991px) {
   .table tbody tr td.eng {
 	background-image: url("../imgs/responsive-images/uk-flag.png");
@@ -185,11 +176,6 @@ TEST
 	.table tbody tr td.fra {
 	background-image: url("../imgs/responsive-images/france-flag.png");
 	} 
-	.table thead {
-		font-size: 12px;
-		letter-spacing: 1.0px;
-	}
-
 }
 
 

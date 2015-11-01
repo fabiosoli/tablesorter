@@ -130,11 +130,6 @@
 
             $('#content-formula').tablesorter({
                 theme : 'blue',
-                headerTemplate: '{content} {icon}',
-                onRenderHeader: function(index){
-                  // the TH content is wrapped with a div.tablesorter-header-inner by default, so just add the new class
-                  $(this).find('div').addClass('roundedCorners header' + index );
-                }
             }); 
         });
     </script>
