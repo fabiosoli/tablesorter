@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>table sorted</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/blue/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    
+
+    <!-- font awesome glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- google font for h1 -->
+    <link href='https://fonts.googleapis.com/css?family=Gravitas+One' rel='stylesheet' type='text/css'>
+    
+
+ </head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Get on Focus</a>
+            </div>            
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row"> <!-- /. STARTs row --> 
+        <h1>get <span>on</span> focus</h1> 
+        
+            <div class="table-responsive panel panel-default">
+                <table id="content-formula" class="table tablesorter">
+                    <thead>
+                        <tr>
+                            <th>Country</th>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Sale</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="country eng">England</td>
+                            <td>Bruce Dickinson</td>
+                            <td>500</td>
+                            <td>800</td>
+                            <td><span class="arrow-pos"></span><span class="bal-pos">300</span></td>
+                        </tr>
+                        <tr>
+                            <td class="country eng">England</td>
+                            <td>Ricky Wilson</td>
+                            <td>400</td>
+                            <td>200</td>
+                            <td><span class="arrow-neg"></span><span class="bal-neg">-200</span></td>
+                        </tr>
+                        <tr>
+                            <td class="country eng">England</td>
+                            <td>Brian May</td>
+                            <td>100</td>
+                            <td>800</td>
+                            <td><span class="arrow-pos"></span><span class="bal-pos">700</span></td>
+                        </tr>
+                        <tr>
+                            <td class="country fra">France</td>
+                            <td>Gérard Depardieu</td>
+                            <td>950</td>
+                            <td>500</td>
+                            <td><span class="arrow-neg"></span><span class="bal-neg">-450</span></td>
+                        </tr>
+                        <tr>
+                            <td class="country ger">Germany</td>
+                            <td>Mario Götze</td>
+                            <td>200</td>
+                            <td>700</td>
+                            <td><span class="arrow-pos"></span><span class="bal-pos">500</span></td>
+                        </tr>
+                        <tr>
+                            <td class="country ger">Germany</td>
+                            <td>Angela Merkel</td>
+                            <td>800</td>
+                            <td>750</td>
+                            <td><span class="arrow-neg"></span><span class="bal-neg">-50</span></td>
+                        </tr>
+                        <tr>
+                            <td class="country ita">Italy</td>
+                            <td>Valentino Rossi</td>
+                            <td>200</td>
+                            <td>700</td>
+                            <td><span class="arrow-pos"></span><span class="bal-pos">500</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+
+        </div><!-- /. ENDs row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- tablesorter -->
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+
+    
+    <script type="text/javascript">
+        $(function(){
+
+            $('#content-formula').tablesorter({
+                theme : 'blue',
+                headerTemplate: '{content} {icon}',
+                onRenderHeader: function(index){
+                  // the TH content is wrapped with a div.tablesorter-header-inner by default, so just add the new class
+                  $(this).find('div').addClass('roundedCorners header' + index );
+                }
+            }); 
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
